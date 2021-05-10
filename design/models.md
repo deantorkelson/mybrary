@@ -1,11 +1,9 @@
-### Books
+## Books
 #### Relations
- - has one
- -- series
- 
- - has many
- -- authors
- -- genres
+ - belongs to
+    - author
+    - genre
+    - series
  
 #### Fields
  - Title
@@ -14,29 +12,29 @@
  - Rating
  - Finished?
  
-### Authors
+## Authors
 #### Relations
  - has many
- -- books
- -- series
+    - books
+    - series
  
 #### Fields
  - name
 
-### Genres
+## Genres
 #### Relations
  - has many
- -- books
+    - books
  
 #### Fields
  - description
  
-### Series
+## Series
 #### Relations
- - has one
- -- author
  - has many
- -- books
+    - books
+ - belongs to
+    - author
  
 #### Fields
  - title
