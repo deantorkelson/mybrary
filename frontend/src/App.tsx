@@ -1,13 +1,17 @@
-import * as React from 'react';
-import Button from '@material-ui/core/Button';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => {
   return (
     <>
-      <h1>
-        Hello world
-      </h1>
-      <Button variant="contained">this is a material UI button</Button>
+      <Router>
+        <div className='App'>
+          <Switch>
+            <Route path='/authors'/>
+            <Route path='/'/>
+          </Switch>
+        </div>
+      </Router>
     </>
   );
 }
